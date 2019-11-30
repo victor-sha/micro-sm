@@ -6,13 +6,13 @@ export class Home extends React.Component {
     render() {
         return (
             <Container>
-                <form class="form-inline md-form form-sm mt-5">
-                    <i class="fas fa-search fa-2x" aria-hidden="true"></i>
-                    <input class="form-control form-control-lg ml-3 w-75" type="text" placeholder="Search"
+                <form className="form-inline md-form form-sm mt-5">
+                    <i className="fas fa-search fa-2x" aria-hidden="true"></i>
+                    <input className="form-control form-control-lg ml-3 w-75" type="text" placeholder="Search"
                         aria-label="Search" />
                 </form>
                 <MSserviceList />
             </Container>
-        )
+        )   
     }
 }

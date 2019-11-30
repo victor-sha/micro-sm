@@ -1,7 +1,15 @@
 import React from "react";
+import axios from "axios";
 
 export class MSserviceList extends React.Component {
-  render() {
+  state = {
+    serviceList: []
+  }
+  componentDidMount() {
+    axios.get('http://localhost:3004/service')
+      .then(res => this.setState({ serviceList: res.data }))
+    }
+    render() {
     return (
       <ul className="list-group my-3">
         <div className="card list-group-item">
