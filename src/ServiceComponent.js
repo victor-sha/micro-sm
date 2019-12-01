@@ -38,6 +38,45 @@ export const ServiceComponent = () => {
               />
             </label>
           </div>
+
+          <div className="form-group ml-5">
+              <label>
+                  Автор
+                  <input
+                      className="form-control"
+                      type="text"
+                      name="author"
+                      value={service.author_id}
+                      onChange={e => setService({author_id: e.target.value})}
+                  />
+              </label>
+          </div>
+
+          <div className="form-group ml-5">
+              <label>
+                  Описание
+                  <input
+                      className="form-control"
+                      type="textarea"
+                      name="description"
+                      value={service.description}
+                      onChange={e => setService({description: e.target.value})}
+                  />
+              </label>
+          </div>
+
+          <div className="form-group ml-5">
+              <label>
+                  Документация
+                  <input
+                      className="form-control"
+                      type="text"
+                      name="documentation"
+                      value={service.documentation_link}
+                      onChange={e => setService({documentation_link: e.target.value})}
+                  />
+              </label>
+          </div>
         </div>
       </form>
   );
