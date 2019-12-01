@@ -17,14 +17,25 @@ export const ServiceComponent = () => {
           <div className="form-group ml-5">
             <label>
                 Название микросервиса
-                <input className="form-control" type="text" name="name" value={service.name} />
+                <input 
+                  className="form-control"
+                  type="text" name="name"
+                  value={service.name}
+                  onChange={e => setService({name: e.target.value})}
+                />
             </label>
           </div>
 
           <div className="form-group ml-5">
             <label>
               Версия
-              <input className="form-control" type="number" name="version" value={service.version}/>
+              <input
+                className="form-control"
+                type="number"
+                name="version"
+                value={service.version}
+                onChange={e => setService({version: e.target.value})}
+              />
             </label>
           </div>
         </div>
