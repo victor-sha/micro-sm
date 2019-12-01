@@ -46,7 +46,7 @@
 		{
 			"id": 2,
 			"name": "microservice_2",
-			"description": "text, a lot of text",
+			"description": "text ahtung",
 			"version": "2.4",
 			"author_id": 1,
 			"tags": [
@@ -139,7 +139,7 @@
 				"tag_1",
 				"tag_3",
 				"tag_12",
-				"tag_7"
+				"tag_77"
 			],
 			"status": [
 				{
@@ -409,5 +409,11 @@
 			"id": 5,
 			"name": "application_5"
 		}
+	],
+	"tags": [
+		"tag_1",
+		"tag_3",
+		"tag_12",
+		"tag_7"
 	]
 }
