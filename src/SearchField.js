@@ -3,9 +3,12 @@ import AsyncSelect from 'react-select/async';
 import Axios from 'axios';
 import { SERVICE_URL } from './constants';
 
-const promiseOptions = inputValue => {
+const promiseOptions = callback => inputValue => {
     return Axios.get(`${SERVICE_URL}${inputValue ? `?q=${inputValue}`: ''}`)
-        .then(res => res.data);
+        .then(res => {
+            callback(res.data);
+            return res.data
+        });
 }
 
 export class SearchField extends Component {
@@ -15,7 +18,7 @@ export class SearchField extends Component {
                 isMulti
                 cacheOptions
                 defaultOptions
-                loadOptions={promiseOptions}
+                loadOptions={promiseOptions(this.props.onChange)}
                 getOptionLabel={option => option.name}
                 getOptionValue={option => option.id}
                 styles={{

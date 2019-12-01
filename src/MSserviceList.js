@@ -3,19 +3,12 @@ import axios from "axios";
 import { Link } from 'react-router-dom';
 
 export class MSserviceList extends React.Component {
-  state = {
-    serviceList: []
-  }
-  componentDidMount() {
-    axios.get('http://localhost:3004/service')
-      .then(res => this.setState({ serviceList: res.data }))
-    }
 
     render() {
     return (
       <ul className="list-group my-3">
-      {this.state.serviceList.length > 1 &&
-        this.state.serviceList.map(({id, name, status, description, tags}) => (
+      {this.props.serviceList.length > 1 &&
+        this.props.serviceList.map(({id, name, status, description, tags}) => (
         <div key={id} className="card list-group-item my-2" style={{background:"#eee"}}>
           <div className="card-body">
             <div className="card-title d-flex justify-content-between">
