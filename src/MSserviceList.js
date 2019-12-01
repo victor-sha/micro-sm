@@ -15,7 +15,7 @@ export class MSserviceList extends React.Component {
       <ul className="list-group my-3">
       {this.state.serviceList.length > 1 &&
         this.state.serviceList.map(({id, name, status, description}) => (
-        <div key={id} className="card list-group-item my-2 bg-secondary">
+        <div key={id} className="card list-group-item my-2" style={{background:"#eee"}}>
           <div className="card-body">
             <div className="card-title d-flex justify-content-between">
               <span>ID: <b>{id}</b></span>
