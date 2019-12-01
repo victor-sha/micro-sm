@@ -17,7 +17,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggklffhfddfff"
+          "comment": "В Эксплуатации"
         },
         {
           "id": 2,
@@ -60,7 +60,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggffsdfsdfsshfddfff"
+          "comment": "Выводится из эсплуатации"
         },
         {
           "id": 2,
@@ -103,7 +103,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggf fhfd dfff"
+          "comment": "Идея"
         },
         {
           "id": 2,
@@ -146,7 +146,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggfssssfhfddfff"
+          "comment": "Тестируется"
         },
         {
           "id": 2,
@@ -189,7 +189,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggffhfddfff"
+          "comment": "Реализация"
         },
         {
           "id": 2,
@@ -232,7 +232,7 @@
           "id": 1,
           "date_changed": "10.01.2019",
           "author_id": 1,
-          "comment": "sdggffhfddfff"
+          "comment": "Согласование"
         },
         {
           "id": 2,
@@ -297,6 +297,20 @@
       "version": "3",
       "description": "Letters microservice",
       "id": 10
+    },
+    {
+      "status": [
+        {
+          "id": 1,
+          "date_changed": "Sun Dec 01 2019",
+          "author_id": 1,
+          "comment": "Идея"
+        }
+      ],
+      "name": "Contact",
+      "version": "1",
+      "description": "Contract",
+      "id": 11
     }
   ],
   "status": [

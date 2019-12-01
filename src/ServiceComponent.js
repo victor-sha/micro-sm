@@ -69,6 +69,19 @@ export const ServiceComponent = () => {
             </label>
           </div>
 
+          <div className="form-group">
+            <label className="col-md-6">
+              Статус
+              <input
+                className="form-control"
+                type="text"
+                name="status"
+                value={service.status && service.status.length > 0 && service.status[0].comment}
+                // onChange={e => setService({...service, status: e.target.value})}
+              />
+            </label>
+          </div>
+
           <div className="form-group d-flex pl-3">
             <label style={{display:"block", width: "345px"}} calssName="d-flex col-md-6" for="author">
               Автор
