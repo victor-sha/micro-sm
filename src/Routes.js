@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import {Nav, Navbar, Form, FormControl, Button} from 'react-bootstrap';
 import { Home } from "./Home";
+import { ServiceComponent } from "./ServiceComponent";
 // This site has 3 pages, all of which are rendered
 // dynamically in the browser (not server rendered).
 //
@@ -49,8 +50,8 @@ export default function BasicExample() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/service/:id">
+            <ServiceComponent />
           </Route>
           <Route path="/dashboard">
             <Dashboard />
@@ -69,13 +70,6 @@ export default function BasicExample() {
 //   );
 // }
 
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
 
 function Dashboard() {
   return (

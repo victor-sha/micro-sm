@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import { Link } from 'react-router-dom';
 
 export class MSserviceList extends React.Component {
   state = {
@@ -27,7 +28,7 @@ export class MSserviceList extends React.Component {
             </div>
             <div className="card-title d-flex justify-content-between">
               <span>Последнее обновление статуса: <b>{description}</b></span>
-              <button type="button" className="btn btn-primary">Подробнее</button>
+              <Link to={`/service/${id}`} className="btn btn-primary">Подробнее</Link>
             </div>
           </div>
         </div>)
