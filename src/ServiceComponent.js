@@ -14,8 +14,8 @@ export const ServiceComponent = () => {
   return (
       <form className="d-flex flex-row justify-content-center">
       <div className="card w-50 my-3">
-          <div className="form-group ml-5">
-            <label>
+          <div className="form-group">
+            <label className="col-md-6">
                 Название микросервиса
                 <input 
                   className="form-control"
@@ -26,8 +26,8 @@ export const ServiceComponent = () => {
             </label>
           </div>
 
-          <div className="form-group ml-5">
-            <label>
+          <div className="form-group">
+            <label className="col-md-6">
               Версия
               <input
                 className="form-control"
@@ -39,8 +39,8 @@ export const ServiceComponent = () => {
             </label>
           </div>
 
-          <div className="form-group ml-5">
-              <label>
+          <div className="form-group">
+              <label className="col-md-6">
                   Автор
                   <input
                       className="form-control"
@@ -52,10 +52,10 @@ export const ServiceComponent = () => {
               </label>
           </div>
 
-          <div className="form-group ml-5">
-              <label>
+          <div className="form-group">
+              <label className="col-md-12">
                   Описание
-                  <input
+                  <textarea
                       className="form-control"
                       type="textarea"
                       name="description"
@@ -65,8 +65,8 @@ export const ServiceComponent = () => {
               </label>
           </div>
 
-          <div className="form-group ml-5">
-              <label>
+          <div className="form-group">
+              <label className="col-md-12">
                   Документация
                   <div className="d-flex">
                       <input
