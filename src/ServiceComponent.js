@@ -104,22 +104,26 @@ export const ServiceComponent = () => {
               </label>
           </div>
 
-          <div className="d-flex flex-row justify-content-centers">
-            <Link
-              to="/"
-              className="btn btn-secondary ml-8"
-              type="button"
-              onClick={() => console.log('hello')}
-            >
-              Закрыть
-            </Link>
-            <button
-              className="btn btn-info"
-              type="button"
-              onClick={sendRequest}
-            >
-              Сохранить
-            </button>
+          <div className="form-group d-flex justify-content-space-between">
+              <div className="col-md-6">
+                <Link
+                  to="/"
+                  className="btn btn-secondary ml-8 col-md-6"
+                  type="button"
+                  onClick={() => console.log('hello')}
+                >
+                  Закрыть
+                </Link>
+              </div>
+              <div className="col-md-6 d-flex justify-content-end">
+                <button
+                  className="btn btn-info col-md-6"
+                  type="button"
+                  onClick={sendRequest}
+                >
+                  Сохранить
+                </button>
+              </div>
           </div>
         </div>
       </form>
