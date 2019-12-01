@@ -53,6 +53,9 @@ export default function BasicExample() {
           <Route path="/service/:id">
             <ServiceComponent />
           </Route>
+          <Route path="/service">
+            <ServiceComponent />
+          </Route>
           <Route path="/dashboard">
             <Dashboard />
           </Route>

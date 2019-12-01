@@ -3,6 +3,16 @@ import {Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 import { SERVICE_URL, AUTHORS_URL } from './constants';
 
+const defaultService = {
+  status: [
+    {
+      "id": 1,
+      "date_changed": new Date().toDateString(),
+      "author_id": 1,
+      "comment": "Идея"
+    },
+  ]
+}
 
 export const ServiceComponent = () => {
   let {id} = useParams();
@@ -20,7 +30,7 @@ export const ServiceComponent = () => {
 
   const sendRequest = useCallback(async () => {
     if (!id) {
-      await axios.post(SERVICE_URL, service);
+      await axios.post(SERVICE_URL, {...defaultService, ...service});
       return;
     }
     await axios.put(`${SERVICE_URL}/${id}`, service);
@@ -65,7 +75,7 @@ export const ServiceComponent = () => {
               id="author"
               value={service.author_id}
               onChange={e => setService({...service, author_id: e.target.value})}
-              >
+            >
               {authors.length > 1 &&
                 authors.map(author => (
                   <option value={author.id}>{author.name}</option>

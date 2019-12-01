@@ -14,11 +14,11 @@ export class MSserviceList extends React.Component {
             <div className="card-title d-flex justify-content-between">
               <span>ID: <b>{id}</b></span>
               <span>Название микросервиса: <b>{name}</b></span>
-              <span>Статус: <b>{status[0].comment}</b></span>
+              <span>Статус: <b>{status && status.length > 0 && status[0].comment}</b></span>
             </div>
             <div className="card-title d-flex justify-content-between">
-              <span>Теги: <b>{tags.length > 0 && '#' + tags.join(', #')}</b></span>
-              <span>Последнее обновление статуса: <b>{status.length > 1 && status[0].date_changed}</b></span>
+              <span>Теги: <b>{tags && tags.length > 0 && '#' + tags.join(', #')}</b></span>
+              <span>Последнее обновление статуса: <b>{status && status.length > 1 && status[0].date_changed}</b></span>
             </div>
             <div className="card-title d-flex justify-content-between">
               <span>Описание: <b>{description}</b></span>

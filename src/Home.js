@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import { MSserviceList } from './MSserviceList';
 import { SearchField } from './SearchField';
@@ -35,7 +36,10 @@ export class Home extends React.Component {
                     {/* <i className="fas fa-search fa-2x" aria-hidden="true"></i>
                     <input className="form-control form-control-lg ml-3 w-75" type="text" placeholder="Search"
                         aria-label="Search" /> */}
-                        <SearchField onChange={this.onChange} />
+                        <SearchField onChange={this.onChange} value={this.state.search} />
+                            <Link to="/service" className="btn btn-primary ml-3">
+                                Создать MK
+                            </Link>
                 </form>
                 <MSserviceList serviceList={this.state.serviceList} />
             </Container>
