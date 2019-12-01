@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 
 export const ServiceComponent = () => {
@@ -68,13 +68,16 @@ export const ServiceComponent = () => {
           <div className="form-group ml-5">
               <label>
                   Документация
-                  <input
-                      className="form-control"
-                      type="text"
-                      name="documentation"
-                      value={service.documentation_link}
-                      onChange={e => setService({documentation_link: e.target.value})}
-                  />
+                  <div className="d-flex">
+                      <input
+                          className="form-control"
+                          type="text"
+                          name="documentation"
+                          value={service.documentation_link}
+                          onChange={e => setService({documentation_link: e.target.value})}
+                      />
+                      <Link to={`/service/${id}`} className="btn btn-primary">Перейти</Link>
+                  </div>
               </label>
           </div>
         </div>
