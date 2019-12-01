@@ -216,55 +216,6 @@
       "documentation_link": "link_1"
     },
     {
-      "id": 6,
-      "name": "microservice_6",
-      "description": "text, a lot of text",
-      "version": "2.4",
-      "author_id": 1,
-      "tags": [
-        "tag_1",
-        "tag_3",
-        "tag_12",
-        "tag_7"
-      ],
-      "status": [
-        {
-          "id": 1,
-          "date_changed": "10.01.2019",
-          "author_id": 1,
-          "comment": "sdgs ds sdgffhfddfff"
-        },
-        {
-          "id": 2,
-          "date_changed": "12.01.2019",
-          "author_id": 4,
-          "comment": "sdgxgffhfddfff"
-        },
-        {
-          "id": 3,
-          "date_changed": "16.01.2019",
-          "author_id": 4,
-          "comment": "sdggffhfddfff"
-        },
-        {
-          "id": 4,
-          "date_changed": "16.01.2019",
-          "author_id": 3,
-          "comment": "sdggffhfddfff"
-        }
-      ],
-      "communications": [
-        3,
-        5
-      ],
-      "applications": [
-        1,
-        2,
-        4
-      ],
-      "documentation_link": "link_1"
-    },
-    {
       "id": 7,
       "name": "microservice_7",
       "description": "text, a lot of text",

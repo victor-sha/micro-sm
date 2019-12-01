@@ -36,6 +36,13 @@ export const ServiceComponent = () => {
     await axios.put(`${SERVICE_URL}/${id}`, service);
   });
 
+  const deleteItem = useCallback(async () => {
+      if(id) {
+        await axios.delete(`${SERVICE_URL}/${id}`)
+      }
+    }
+  )
+
   console.log(service);
   return (
       <form className="d-flex flex-row justify-content-center">
@@ -83,7 +90,7 @@ export const ServiceComponent = () => {
             <button
                   className="btn btn-danger col-md-3 ml-5 btn-sm"
                   type="button"
-                  onClick={sendRequest}
+                  onClick={deleteItem}
                 >
                   Удалить
                 </button>
