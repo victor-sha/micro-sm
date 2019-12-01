@@ -7,7 +7,7 @@ export class MSserviceList extends React.Component {
     render() {
     return (
       <ul className="list-group my-3">
-      {this.props.serviceList.length > 1 &&
+      {this.props.serviceList.length > 0 &&
         this.props.serviceList.map(({id, name, status, description, tags}) => (
         <div key={id} className="card list-group-item my-2" style={{background:"#eee"}}>
           <div className="card-body">
@@ -17,7 +17,7 @@ export class MSserviceList extends React.Component {
               <span>Статус: <b>{status[0].comment}</b></span>
             </div>
             <div className="card-title d-flex justify-content-between">
-              <span>Теги: <b>{tags.length > 1 && '#' + tags.join(', #')}</b></span>
+              <span>Теги: <b>{tags.length > 0 && '#' + tags.join(', #')}</b></span>
               <span>Последнее обновление статуса: <b>{status.length > 1 && status[0].date_changed}</b></span>
             </div>
             <div className="card-title d-flex justify-content-between">

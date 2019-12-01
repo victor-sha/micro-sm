@@ -14,21 +14,27 @@ const promiseOptions = callback => inputValue => {
 export class SearchField extends Component {
     render() {
         return (
-            <AsyncSelect
-                isMulti
-                cacheOptions
-                defaultOptions
-                loadOptions={promiseOptions(this.props.onChange)}
-                getOptionLabel={option => option.name}
-                getOptionValue={option => option.id}
-                styles={{
-                    container: base => {
-                        return {
-                        ...base,
-                        width: 700
-                    }}
-                }}
-            />
+            <>
+                <i className="fas fa-search fa-2x" aria-hidden="true"></i>
+                <input className="form-control form-control-lg ml-3 w-75" type="text" placeholder="Search"
+                        aria-label="Search" onChange={e => this.props.onChange(e.target.value)} />
+            </>
         )
     }
 }
+                
+                // <AsyncSelect
+                //     isMulti
+                //     cacheOptions
+                //     defaultOptions
+                //     loadOptions={promiseOptions(this.props.onChange)}
+                //     getOptionLabel={option => option.name}
+                //     getOptionValue={option => option.id}
+                //     styles={{
+                //         container: base => {
+                //             return {
+                //             ...base,
+                //             width: 700
+                //         }}
+                //     }}
+                // />

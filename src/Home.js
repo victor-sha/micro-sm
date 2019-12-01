@@ -3,18 +3,29 @@ import { Container } from 'react-bootstrap';
 import { MSserviceList } from './MSserviceList';
 import { SearchField } from './SearchField';
 import axios from 'axios';
+import { SERVICE_URL } from './constants';
 
 export class Home extends React.Component {
     state={search: '', serviceList: []}
 
-    componentDidMount() {
-        axios.get('http://localhost:3004/service')
+    loadItems = () => {
+        axios.get(SERVICE_URL)
         .then(res => this.setState({ ...this.state, serviceList: res.data }))
     }
+
+    componentDidMount() {
+        this.loadItems();
+    }
     
-    onChange = (value) => {
-        console.log('onChange', value)
-        this.setState({...this.state, search: value})
+    onChange = (inputValue) => {
+        console.log('onChange', inputValue)
+        
+        axios.get(`${SERVICE_URL}${inputValue ? `?q=${inputValue}`: ''}`)
+        .then(res => {
+            console.log('search res', res.data)
+            this.setState({...this.state, serviceList: res.data})
+            this.setState({...this.state, search: inputValue});
+            });
     }
 
     render() {
