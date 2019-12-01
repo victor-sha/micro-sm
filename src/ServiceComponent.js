@@ -12,20 +12,22 @@ export const ServiceComponent = () => {
   }, [id]);
   console.log(service);
   return (
-      <form>
-          <div className="form-group">
+      <form className="d-flex flex-row justify-content-center">
+      <div className="card w-50 my-3">
+          <div className="form-group ml-5">
             <label>
                 Название микросервиса
-                <input type="text" name="name" value={service.name} />
+                <input className="form-control" type="text" name="name" value={service.name} />
             </label>
           </div>
 
-          <div>
+          <div className="form-group ml-5">
             <label>
               Версия
-              <input type="number" name="version" value={service.version}/>
+              <input className="form-control" type="number" name="version" value={service.version}/>
             </label>
           </div>
+        </div>
       </form>
   );
 }
