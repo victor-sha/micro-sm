@@ -29,11 +29,8 @@ export default function BasicExample() {
           <Nav.Item variant="dark">
             <NavLink style={linkStyle} color="black" to="/">Home</NavLink>
           </Nav.Item>
-          <Nav.Item>
+          <Nav.Item className="ml-3">
             <NavLink style={linkStyle} to="/about">About</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink style={linkStyle} to="/dashboard">Dashboard</NavLink>
           </Nav.Item>
         </Nav>
       </Navbar>

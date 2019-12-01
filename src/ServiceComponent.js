@@ -50,9 +50,6 @@ export const ServiceComponent = () => {
                   onChange={e => setService({...service, name: e.target.value})}
                 />
             </label>
-          </div>
-
-          <div className="form-group">
             <label className="col-md-6">
               Версия
               <input
@@ -65,24 +62,32 @@ export const ServiceComponent = () => {
             </label>
           </div>
 
-          <div className="form-group pl-3">
+          <div className="form-group d-flex pl-3">
             <label style={{display:"block", width: "345px"}} calssName="d-flex col-md-6" for="author">
               Автор
-            <select
-              className="form-control "
-              type="text"
-              name="author"
-              id="author"
-              value={service.author_id}
-              onChange={e => setService({...service, author_id: e.target.value})}
-            >
-              {authors.length > 1 &&
-                authors.map(author => (
-                  <option value={author.id}>{author.name}</option>
-                  ))
-                }
-            </select>
-                </label>
+              <select
+                className="form-control "
+                type="text"
+                name="author"
+                id="author"
+                value={service.author_id}
+                onChange={e => setService({...service, author_id: e.target.value})}
+              >
+                {authors.length > 1 &&
+                  authors.map(author => (
+                    <option value={author.id}>{author.name}</option>
+                    ))
+                  }
+              </select>
+            </label>
+            <button
+                  className="btn btn-danger col-md-3 ml-5 btn-sm"
+                  type="button"
+                  onClick={sendRequest}
+                >
+                  Удалить
+                </button>
+
           </div>
 
           <div className="form-group">
