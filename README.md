@@ -12,5 +12,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `npm start`
 
-Запускает фронт на [http://localhost:3000](http://localhost:3000)
+Запускает фронт на [http://localhost:3001](http://localhost:3001)
 И поднимает json-server в качестве сервера данных на 3004 порту
